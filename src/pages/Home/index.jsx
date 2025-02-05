@@ -13,7 +13,7 @@ import { Footer } from '../../components/Footer/footer'
 export const Home = () => {
   return (
     <div className=' w-[100%]'>
-      <Navbar/>
+      {/* <Navbar/> */}
       <Overview/>
       <Slider/>
       <Institute/>

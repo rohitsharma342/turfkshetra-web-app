@@ -3,12 +3,13 @@ import React from 'react'
 import waveImage from "../../assets/wave.png"
 import { Counter } from './counter'
 import ServiceList from './serviceList'
+import { Link } from 'react-router-dom'
 export const Overview = () => {
   const data =[1,2,3,4]
   return (
     <>
     <div
-    className="relative w-full py-40 flex items-center justify-center bg-cover bg-center text-white mb-5"
+    className="relative w-full py-40 flex items-center justify-center  bg-cover bg-center text-white mb-5"
     style={{
       backgroundImage: "url('https://source.unsplash.com/1600x900/?hospital,technology')",
     }}
@@ -17,7 +18,7 @@ export const Overview = () => {
     <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
     {/* Content */}
-    <div className="text-center px-6 md:px-12 relative z-10">
+    <div className="text-center px-6 md:px-12 relative">
       <h1 className="text-3xl md:text-5xl font-bold">
         AERB+ <span className="text-yellow-400">E-Lora</span> Solution
         <span className="text-white"> “Expert Guidance for a Complex World”</span>
@@ -32,9 +33,9 @@ export const Overview = () => {
       </p>
       
       {/* Button */}
-      <button className="mt-6 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-lg text-lg">
-        Contact Us
-      </button>
+      <a href="conatct-us "><button className="mt-6  cursor-pointer bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-lg text-lg">
+      Contact Us
+      </button></a>
     </div>
 
  
