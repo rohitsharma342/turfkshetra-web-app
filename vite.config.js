@@ -8,7 +8,7 @@ export default defineConfig({
     port: process.env.PORT || 3000,
     host: '0.0.0.0',
     strictPort: true,
-    cors: true, // Enable CORS if needed
+    cors: true, // Enable CORS
     proxy: {
       "/api": {
         target: "https://turfkshetra-web-app.onrender.com",
@@ -16,10 +16,12 @@ export default defineConfig({
         secure: true,
       },
     },
+    allowedHosts: ["turfkshetra-web-app.onrender.com"], // Allow Render host
   },
   preview: {
     port: process.env.PORT || 3000,
     host: '0.0.0.0',
+    allowedHosts: ["turfkshetra-web-app.onrender.com"],
   },
   define: {
     'process.env.NODE_ENV': '"production"',
